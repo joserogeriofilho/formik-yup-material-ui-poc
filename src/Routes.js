@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import Subscription from './components/Subscription';
-import Tickets from './components/Tickets';
+import Home from './pages/Home';
+import Subscription from './pages/Subscription';
+import Tickets from './pages/Tickets';
 
 
 export default function Routes({children}) {
