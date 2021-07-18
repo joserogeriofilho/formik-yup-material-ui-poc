@@ -10,7 +10,7 @@ export default function FormikSelect({children, label, id, ...restProps }){
       label={label}
       id={id}
       value={values[id]}
-      onChange={handleChange[id]}
+      onChange={ handleChange(id) }
       error={touched[id] && Boolean(errors[id])}
       helperText={touched[id] && errors[id]}
       {...restProps}
