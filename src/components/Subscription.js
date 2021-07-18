@@ -1,5 +1,10 @@
 export default function Subscription() {
   return (
-    <p>Subscription page</p>
+    <>
+      <h1>Subscription page</h1>
+      <form>
+
+      </form>
+    </>
   );
 }
