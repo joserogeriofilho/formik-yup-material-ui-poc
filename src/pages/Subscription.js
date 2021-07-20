@@ -23,7 +23,7 @@ const validationSchema = Yup.object({
     .required("Required"),
   gender: Yup.string()
     .oneOf(
-      ["none", "non-binary", "other", "female", "male"],
+      ["non-binary", "other", "female", "male"],
       "Invalid gender"
     )
     .required("Required")
