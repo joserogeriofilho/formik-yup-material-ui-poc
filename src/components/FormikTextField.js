@@ -1,16 +1,20 @@
 import { useFormikContext } from 'formik';
 import { TextField}  from '@material-ui/core';
 
-export default function FormikTextField({id, ...restProps }){
+export default function FormikTextField({id, isArrayItem, arrayName, index, ...restProps }){
   const { values, handleChange, touched, errors } = useFormikContext();
 
+  const isTouched = isArrayItem ? touched[arrayName] && touched[arrayName][index] && touched[arrayName][index][id] : touched[id];
+  const error = isArrayItem ? errors[arrayName] && errors[arrayName][index] && errors[arrayName][index][id] : errors[id];
+  const value = isArrayItem ? values[arrayName][index][id] : values[id];
+  
   return(
     <TextField
-      id={id}
-      value={values[id]}
+      id={`${arrayName}.${index}.${id}`}
+      value={value}
       onChange={handleChange}
-      error={touched[id] && Boolean(errors[id])}
-      helperText={touched[id] && errors[id]}
+      error={isTouched && Boolean(error)}
+      helperText={isTouched && error}
       {...restProps}
     />
   )
