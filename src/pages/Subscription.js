@@ -1,14 +1,14 @@
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { Box, Button, Container, Grid, MenuItem }  from '@material-ui/core';
-import FormikTextField from '../components/FormikTextField';
-import FormikSelect from '../components/FormikSelect';
+import { Box, Button, Container, Grid, MenuItem } from "@material-ui/core";
+import FormikTextField from "../components/FormikTextField";
+import FormikSelect from "../components/FormikSelect";
 
 const initialValues = {
   firstName: "",
   lastName: "",
   email: "",
-  gender: "none"
+  gender: "none",
 };
 
 const validationSchema = Yup.object({
@@ -18,15 +18,10 @@ const validationSchema = Yup.object({
   lastName: Yup.string()
     .max(20, "Must be 20 characters or less")
     .required("Required"),
-  email: Yup.string()
-    .email("Invalid email addresss`")
-    .required("Required"),
+  email: Yup.string().email("Invalid email addresss`").required("Required"),
   gender: Yup.string()
-    .oneOf(
-      ["non-binary", "other", "female", "male"],
-      "Invalid gender"
-    )
-    .required("Required")
+    .oneOf(["non-binary", "other", "female", "male"], "Invalid gender")
+    .required("Required"),
 });
 
 export default function Subscription() {
@@ -40,26 +35,46 @@ export default function Subscription() {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={ values => {
+          onSubmit={(values) => {
             alert(JSON.stringify(values, null, 2));
           }}
         >
           <Form>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <FormikTextField id="firstName" label="First Name" variant="outlined" fullWidth />
+                <FormikTextField
+                  id="firstName"
+                  label="First Name"
+                  variant="outlined"
+                  fullWidth
+                />
               </Grid>
 
               <Grid item xs={12}>
-                <FormikTextField id="lastName" label="Last Name" variant="outlined" fullWidth />
+                <FormikTextField
+                  id="lastName"
+                  label="Last Name"
+                  variant="outlined"
+                  fullWidth
+                />
               </Grid>
 
               <Grid item xs={12}>
-                <FormikTextField id="email" label="E-mail" variant="outlined" fullWidth />
+                <FormikTextField
+                  id="email"
+                  label="E-mail"
+                  variant="outlined"
+                  fullWidth
+                />
               </Grid>
 
               <Grid item xs={12}>
-                <FormikSelect id="gender" label="Gender" variant="outlined" fullWidth>
+                <FormikSelect
+                  id="gender"
+                  label="Gender"
+                  variant="outlined"
+                  fullWidth
+                >
                   <MenuItem value="none">
                     <em>None</em>
                   </MenuItem>

@@ -41,19 +41,20 @@ export default function Tickets() {
 
   return (
     <Container maxWidth="sm">
-      <Grid container justifyContent="center" spacing={2}>
-        <Grid item xs={12}>
+      <Grid container spacing={3}>
+        <Grid item>
           <h1>Subscription page</h1>
         </Grid>
       </Grid>
+
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
       >
         {({ errors, values, touched, setValues }) => (
-          <Form>
-            <Grid container spacing={2}>
+          <>
+            <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Button
                   variant="contained"
@@ -65,74 +66,80 @@ export default function Tickets() {
               </Grid>
             </Grid>
 
-            {values.tickets.map((ticket, index) => (
-              <Grid container spacing={2} key={index}>
-                <Grid item xs={12}>
-                  <FormikTextField
-                    isArrayItem
-                    id={"firstName"}
-                    arrayName={"tickets"}
-                    index={index}
-                    label="First Name"
-                    variant="outlined"
-                    fullWidth
-                  />
-                </Grid>
+            <Form>
+              {values.tickets.map((ticket, index) => (
+                <Grid container spacing={3}>
+                  <Grid item xs={12}>
+                    <FormikTextField
+                      isArrayItem
+                      id={"firstName"}
+                      arrayName={"tickets"}
+                      index={index}
+                      label="First Name"
+                      variant="outlined"
+                      fullWidth
+                    />
+                  </Grid>
 
-                <Grid item xs={12}>
-                  <FormikTextField
-                    isArrayItem
-                    id={"lastName"}
-                    arrayName={"tickets"}
-                    index={index}
-                    label="Last Name"
-                    variant="outlined"
-                    fullWidth
-                  />
-                </Grid>
+                  <Grid item xs={12}>
+                    <FormikTextField
+                      isArrayItem
+                      id={"lastName"}
+                      arrayName={"tickets"}
+                      index={index}
+                      label="Last Name"
+                      variant="outlined"
+                      fullWidth
+                    />
+                  </Grid>
 
-                <Grid item xs={12}>
-                  <FormikTextField
-                    isArrayItem
-                    id={"email"}
-                    arrayName={"tickets"}
-                    index={index}
-                    label="E-mail"
-                    variant="outlined"
-                    fullWidth
-                  />
-                </Grid>
+                  <Grid item xs={12}>
+                    <FormikTextField
+                      isArrayItem
+                      id={"email"}
+                      arrayName={"tickets"}
+                      index={index}
+                      label="E-mail"
+                      variant="outlined"
+                      fullWidth
+                    />
+                  </Grid>
 
-                <Grid item xs={12}>
-                  <FormikSelect
-                    id="gender"
-                    arrayName={"tickets"}
-                    index={index}
-                    label="Gender"
-                    variant="outlined"
-                    fullWidth
-                    isArrayItem
-                  >
-                    <MenuItem value="none">
-                      <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={"non-binary"}>Non-Binary</MenuItem>
-                    <MenuItem value={"other"}>Other</MenuItem>
-                    <MenuItem value={"female"}>Female</MenuItem>
-                    <MenuItem value={"male"}>Male</MenuItem>
-                  </FormikSelect>
+                  <Grid item xs={12}>
+                    <FormikSelect
+                      id="gender"
+                      arrayName={"tickets"}
+                      index={index}
+                      label="Gender"
+                      variant="outlined"
+                      fullWidth
+                      isArrayItem
+                    >
+                      <MenuItem value="none">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value={"non-binary"}>Non-Binary</MenuItem>
+                      <MenuItem value={"other"}>Other</MenuItem>
+                      <MenuItem value={"female"}>Female</MenuItem>
+                      <MenuItem value={"male"}>Male</MenuItem>
+                    </FormikSelect>
+                  </Grid>
                 </Grid>
-              </Grid>
-            ))}
+              ))}
 
-            <Grid item xs={12}>
-              <Box display="flex" justifyContent="flex-end">
-                <Button variant="contained" color="primary" type="submit">
-                  Submit
-                </Button>
-              </Box>
-            </Grid>
-          </Form>
+              {values.tickets.length > 0 && (
+                <Grid container spacing={3}>
+                  <Grid item xs={12}>
+                    <Box display="flex" justifyContent="flex-end">
+                      <Button variant="contained" color="primary" type="submit">
+                        Submit
+                      </Button>
+                    </Box>
+                  </Grid>
+                </Grid>
+              )}
+            </Form>
+          </>
         )}
       </Formik>
     </Container>
