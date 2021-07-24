@@ -4,11 +4,11 @@
 
 [![Build Status][build-badge]][build]
 
-Some examples of Formik controlled forms with Yup validation and using Material-UI components.
+Some examples of Formik controlled forms with Yup validation and Material-UI components.
 
 Live demo **[here](http://joserogeriofilho.github.io/formik-yup-material-ui-poc)**.
 
-[![telas](https://user-images.githubusercontent.com/12038461/125882675-e09b758f-3657-49ca-9c40-50f4f0a83c0a.png)](http://joserogeriofilho.github.io/read-list-app)
+[![telas](https://user-images.githubusercontent.com/12038461/126855699-3ae9171a-cf5d-409b-b570-c931582ebab0.png)](http://joserogeriofilho.github.io/formik-yup-material-ui-poc)
 
 </div>
 
