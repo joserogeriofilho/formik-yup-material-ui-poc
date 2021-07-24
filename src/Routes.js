@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Navigation from './components/Navigation';
 import Home from "./pages/Home";
 import Subscription from "./pages/Subscription";
 import Tickets from "./pages/Tickets";
@@ -7,6 +8,7 @@ import Tickets from "./pages/Tickets";
 export default function Routes({ children }) {
   return (
     <BrowserRouter>
+      <Navigation />
       {children}
       <Switch>
         <RouteWrapper path="/" exact component={Home} />
