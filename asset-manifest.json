@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/formik-yup-material-ui-poc/static/css/main.d940f6eb.chunk.css",
+    "main.js": "/formik-yup-material-ui-poc/static/js/main.b8c1aa9f.chunk.js",
+    "main.js.map": "/formik-yup-material-ui-poc/static/js/main.b8c1aa9f.chunk.js.map",
+    "runtime-main.js": "/formik-yup-material-ui-poc/static/js/runtime-main.89b3bf41.js",
+    "runtime-main.js.map": "/formik-yup-material-ui-poc/static/js/runtime-main.89b3bf41.js.map",
+    "static/js/2.4a5d8a2c.chunk.js": "/formik-yup-material-ui-poc/static/js/2.4a5d8a2c.chunk.js",
+    "static/js/2.4a5d8a2c.chunk.js.map": "/formik-yup-material-ui-poc/static/js/2.4a5d8a2c.chunk.js.map",
+    "index.html": "/formik-yup-material-ui-poc/index.html",
+    "static/css/main.d940f6eb.chunk.css.map": "/formik-yup-material-ui-poc/static/css/main.d940f6eb.chunk.css.map",
+    "static/js/2.4a5d8a2c.chunk.js.LICENSE.txt": "/formik-yup-material-ui-poc/static/js/2.4a5d8a2c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.89b3bf41.js",
+    "static/js/2.4a5d8a2c.chunk.js",
+    "static/css/main.d940f6eb.chunk.css",
+    "static/js/main.b8c1aa9f.chunk.js"
+  ]
+}
