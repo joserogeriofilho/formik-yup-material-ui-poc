@@ -43,7 +43,7 @@ export default function Tickets() {
     <Container maxWidth="sm">
       <Grid container spacing={3}>
         <Grid item>
-          <h1>Subscription page</h1>
+          <h1>Tickets</h1>
         </Grid>
       </Grid>
 
@@ -68,7 +68,7 @@ export default function Tickets() {
 
             <Form>
               {values.tickets.map((ticket, index) => (
-                <Grid container spacing={3}>
+                <Grid container spacing={3} key={index}>
                   <Grid item xs={12}>
                     <FormikTextField
                       isArrayItem

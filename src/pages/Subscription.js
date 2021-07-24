@@ -29,7 +29,7 @@ export default function Subscription() {
     <Container maxWidth="sm">
       <Grid container justifyContent="center" spacing={2}>
         <Grid item xs={12}>
-          <h1>Subscription page</h1>
+          <h1>Subscription</h1>
         </Grid>
 
         <Formik
